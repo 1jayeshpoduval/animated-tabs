@@ -1,38 +1,78 @@
-.App {
-  text-align: center;
+*, *::after, *::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.animated-tabs-project {
+  font-family: 'Inter';
+  background-color: #181818;
+  color: #fff;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.section {
+  width: 100vw;
+  height: 100vh;
+  padding: 3rem;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.container {
+  width: 90%;
+  height: 100%;
+  max-width: 1500px;
+  margin: 0 auto;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.tabs-wrapper {
+  display: flex;
+  gap: 1em;
+  padding: 0.5rem;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #fff;
+  /* width: 500px;
+  height: 200px; */
+  border-radius: 50vw;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.tab {
+  font-family: 'Inter';
+  font-weight: 300;
+  color: #ffffff;
+  background-color: transparent;
+  border: transparent;
+  font-size: 1.1rem;
+  position: relative;
+  padding: 0.5rem 1rem;
+  border-radius: 50vw;
+  cursor: pointer;
 }
+
+.tab.hover {
+  opacity: 60%;
+}
+
+.u-position-relative {
+  position: relative;
+  z-index: 2;
+}
+
+.active-tab {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  border-radius: 50vw;
+  padding: 0.5rem 1rem;
+  background-color: #fff;
+  border-radius: 50vw;
+}
+
+
+
+
+

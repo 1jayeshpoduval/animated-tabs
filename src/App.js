@@ -1,22 +1,31 @@
-import logo from './logo.svg';
+import { useState } from 'react';
 import './App.css';
+import Tabs from './Tabs';
+import {tabs} from './tabsData'
 
 function App() {
+
+  const [activeTab, setActiveTab] = useState(tabs[0].id)
+  const [completed, setCompleted] = useState (false)
+
+  const tabSelect = (id) => {
+    setActiveTab(id)
+    setCompleted(false)
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+    <div className='animated-tabs-project'>
+      <header className='page-header'>
+        <main className='page-main'>
+          <section className='section'>
+            <div className='container'>
+                <Tabs activeTab = {activeTab}
+                 setCompleted = {setCompleted}
+                 completed = {completed}
+                 tabClick = {tabSelect} />
+              </div>
+          </section>
+        </main>
       </header>
     </div>
   );
